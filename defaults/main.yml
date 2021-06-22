@@ -1,0 +1,15 @@
+---
+state: present
+namespace: data
+
+storage_class:
+
+postgresql_state: "{{ state }}"
+postgresql_namespace: "{{ namespace }}"
+postgresql_storage_class: "{{ storage_class }}"
+postgresql_storage_size: 8Gi
+
+postgresql_admin_password: foo_pass
+
+# https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
+postgresql_chart_values: {}

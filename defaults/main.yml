@@ -9,7 +9,9 @@ postgresql_namespace: "{{ namespace }}"
 postgresql_storage_class: "{{ storage_class }}"
 postgresql_storage_size: 8Gi
 
-postgresql_admin_password: foo_pass
+postgresql_database: test
+postgresql_username: test
+postgresql_password: test
 
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql_chart_values: {}

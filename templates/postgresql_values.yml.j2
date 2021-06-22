@@ -3,7 +3,9 @@
 ---
 global:
   postgresql:
-    postgresqlPassword: "{{ postgresql_admin_password }}"
+    postgresqlDatabase: "{{ postgresql_database }}"
+    postgresqlUsername: "{{ postgresql_username }}"
+    postgresqlPassword: "{{ postgresql_password }}"
   storageClass: "{{ postgresql_storage_class }}"
 persistence:
   size: "{{ postgresql_storage_size }}"

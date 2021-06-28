@@ -12,7 +12,7 @@
     namespace: "{{ postgresql_namespace }}"
     create_namespace: true
     chart_ref: bitnami/postgresql
-    chart_version: 10.5.0
+    chart_version: 10.3.13
     values: "{{ lookup('template', 'postgresql_values.yml.j2') | from_yaml | combine(postgresql_chart_values, recursive=True) }}"
     wait: yes
     # wait_timeout: 10m

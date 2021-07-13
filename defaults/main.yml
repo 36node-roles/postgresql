@@ -1,15 +1,12 @@
 ---
-state: present
-namespace: data
+postgresql_state: present
+postgresql_namespace: data
 
-storage_class:
+postgresql_storage_class:
 
-postgresql_state: "{{ state }}"
-postgresql_namespace: "{{ namespace }}"
-postgresql_storage_class: "{{ storage_class }}"
 postgresql_storage_size: 8Gi
 
-postgresql_database: test
+postgresql_database:
 postgresql_username: test
 postgresql_password: test
 

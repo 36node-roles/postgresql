@@ -10,6 +10,7 @@
     state: "{{ postgresql_state }}"
     name: postgresql
     namespace: "{{ postgresql_namespace }}"
+    # 会自动创建k8s的ns
     create_namespace: true
     chart_ref: bitnami/postgresql
     chart_version: 10.3.13

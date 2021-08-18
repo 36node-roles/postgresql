@@ -1,14 +1,22 @@
 ---
-postgresql_state: present
-postgresql_namespace: data
+state: present
+namespace: data
+storage_class: "-"
+cert_issuer: "letsencrypt-http"
+wait: no
 
-postgresql_storage_class:
+storage_size: 8Gi
+username: test
+password: test
 
-postgresql_storage_size: 8Gi
+postgresql_state: "{{ state }}"
+postgresql_namespace: "{{ namespace }}"
+postgresql_storage_class: "{{ storage_class }}"
+postgresql_storage_size: "{{ storage_size }}"
 
 postgresql_database:
-postgresql_username: test
-postgresql_password: test
+postgresql_username: "{{ username }}"
+postgresql_password: "{{ password }}"
 
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 postgresql_chart_values: {}

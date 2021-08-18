@@ -15,6 +15,6 @@
     chart_ref: bitnami/postgresql
     chart_version: 10.3.13
     values: "{{ lookup('template', 'postgresql_values.yml.j2') | from_yaml | combine(postgresql_chart_values, recursive=True) }}"
-    wait: yes
+    wait: "{{ wait }}"
     wait_timeout: 10m
   register: postgresql_installed

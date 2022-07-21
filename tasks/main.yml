@@ -13,7 +13,7 @@
     # 会自动创建k8s的ns
     create_namespace: true
     chart_ref: bitnami/postgresql
-    chart_version: 10.3.13
+    chart_version: 10.16.2
     values: "{{ lookup('template', 'postgresql_values.yml.j2') | from_yaml | combine(postgresql_chart_values, recursive=True) }}"
     wait: "{{ wait }}"
     wait_timeout: 10m

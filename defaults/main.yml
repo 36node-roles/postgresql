@@ -14,7 +14,7 @@ postgresql_namespace: "{{ namespace }}"
 postgresql_storage_class: "{{ storage_class }}"
 postgresql_storage_size: "{{ storage_size }}"
 
-postgresql_database:
+postgresql_database: postgres
 postgresql_username: "{{ username }}"
 postgresql_password: "{{ password }}"
 
